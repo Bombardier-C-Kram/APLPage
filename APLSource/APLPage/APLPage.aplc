@@ -1,0 +1,15 @@
+:Namespace APLPage
+
+∇ Page←ctx GenPage pageFile;PageMask;inds;PageSplit
+  Page←' ',(⊃⎕NGET pageFile)
+  PageMask←('<!--⋄'⍷Page)∨(⌽'>--⋄'⍷⌽Page)
+  inds←⎕IO-⍨1+2×⍳2÷⍨≢⍸PageMask
+  :If 0=⍴inds
+    :Return
+  :EndIf
+  PageSplit←Page⊆⍨~PageMask
+  PageSplit[inds]←ctx.{{0::{⎕←'Error in generation'⋄⍕''}⋄⍕⍎'⋄'@{+⌿(⎕UCS 13 10)∘.=⍵}¯3↓4↓⍵}¨⍵}PageSplit[inds]
+  Page←1↓∊PageSplit
+∇
+
+:EndNamespace

@@ -1,0 +1,23 @@
+{
+  "api": "",
+  "assets": "",
+  "date": 20250503.000000,
+  "description": "Generic APLPage (.aplp) templating library for Dyalog APL; loads `.aplp` files with placeholder substitution.",
+  "documentation": "",
+  "files": "",
+  "group": "spacequacker",
+  "io": 1,
+  "license": "MIT",
+  "minimumAplVersion": "18.0",
+  "ml": 1,
+  "name": "APLPage",
+  "os_lin": 1,
+  "os_mac": 1,
+  "os_win": 1,
+  "project_url": "",
+  "source": "APLSource/APLPage",
+  "tags": "aplpage,template,html,aplp,website",
+  "uri": "https://tatin.dev/",
+  "userCommandScript": "",
+  "version": "0.1.0+0"
+}
