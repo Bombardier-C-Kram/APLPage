@@ -1,6 +1,6 @@
 # APLPage
 
-A minimal templating library for Dyalog APL that renders `.aplp` pages by substituting placeholder markers with values from a supplied APL namespace. Designed for use in Cider projects or any APL-based static page generation.
+A minimal templating library for Dyalog APL that renders `.aplp` pages by substituting placeholder markers with values from a supplied APL namespace.
 
 ---
 
@@ -9,7 +9,7 @@ A minimal templating library for Dyalog APL that renders `.aplp` pages by substi
 - Placeholder syntax: `<!--⋄ VariableName ⋄-->`
 - Substitute markers with variables from a provided namespace (ctx)
 - No external dependencies required
-- Packaged for both Tatin (`apl-package.json`) and Cider (`cider.config`)
+- [Packaged](https://tatin.dev/v1/packages/major_versions/bkaw-APLPage) for Tatin package manager
 
 ## Installation
 
@@ -24,11 +24,9 @@ A minimal templating library for Dyalog APL that renders `.aplp` pages by substi
 
 1. Create or use an existing namespace as the template context. Assign any variables you want to inject:
    ```apl
-   ∇ SetupTemplateContext;ctx
      ctx←⎕NS ''           ⍝ Empty namespace
      ctx.Title←'My Site'
      ctx.UserName←'Alice'
-   ∇
    ```
 
 2. Call the `GenPage` function with your context and the path to a `.aplp` file:
@@ -62,4 +60,4 @@ APLPage/
 This project is released under the MIT License.
 
 ---
-_Version 0.1.0_
+_Version 0.1.2_
